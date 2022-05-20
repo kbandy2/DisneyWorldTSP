@@ -51,8 +51,8 @@ dist_mat = defaultdict(int)
 for i in attraction_names:
     for j in attraction_names:
         if i !=j:
-            loc1 = (coord_dict[i]["lat"], coord_dict[i]["lat"])
-            loc2 = (coord_dict[j]["lat"], coord_dict[j]["lat"])
+            loc1 = (coord_dict[i]["lat"], coord_dict[i]["lon"])
+            loc2 = (coord_dict[j]["lat"], coord_dict[j]["lon"])
             mi = distance.distance(loc1, loc2).miles
             dist_mat[(i,j)] = mi
         
